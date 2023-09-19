@@ -1,0 +1,412 @@
+/*
+styles for 1060px width to ? finish 9/19 - be done with product landing page for now
+put on netlify, turn in for cert
+*/
+
+:root {
+  --purplebg: #3c3344;
+  --dgreen-bg: #003b39;
+  --dgreen-2: #136d69;
+  --light-text: #edfffb;
+  --tertiary: #ac8e5a;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 120%;
+  font-family: "Ysabeau SC", sans-serif;
+  background-color: var(--purplebg);
+  color: var(--light-text);
+}
+a {
+  text-decoration: none;
+  color: var(--light-text);
+}
+#to-top {
+  position: absolute;
+  top: 0;
+  width: 0%;
+  height: 0%;
+}
+#header {
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  background-color: #3c3344;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  min-height: 100px;
+  max-height: 250px;
+  z-index: 1;
+}
+.logo {
+  width: fit-content;
+  height: 100%;
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  z-index: 1;
+}
+
+#nav-bar {
+  display: grid;
+  width: 37%;
+  grid-template-columns: 33.4% 33.3% 33.3%;
+  grid-template-rows: auto;
+  font-size: 150%;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+#nav-bar > div {
+  text-align: center;
+}
+#main-a {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: 100%;
+  grid-template-rows: 89vh 89vh 89vh 40vh;
+}
+.chunks {
+  display: grid;
+  width: 100%;
+  background-color: var(--purplebg);
+}
+#promo {
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100%;
+  background-color: var(--tertiary);
+}
+#promo img {
+  width: 100%;
+  height: 100%;
+  place-self: center;
+  object-fit: scale-down;
+}
+
+#why-us {
+  width: 100%;
+  height: 100%;
+  background-color: var(--dgreen-bg);
+  padding: 5em;
+  padding-top: 2em;
+  border: 0.2em solid #07141450;
+}
+.promo-copy {
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: #003b39;
+  color: var(--light-text);
+  text-wrap: wrap;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+#review {
+  display: block;
+  font-family: "Arial";
+  width: 100%;
+}
+#products {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  justify-content: space-evenly;
+  grid-template-columns: 33.3% 33.4% 33.3%;
+  grid-template-rows: 100%;
+  place-items: center;
+  column-gap: 1em;
+}
+.listing {
+  display: grid;
+  grid-template-rows: 15% 85%;
+  width: 90%;
+  height: 80%;
+  border: 2px var(--tertiary) solid;
+}
+.listing-header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #b8ab9555;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.listing-details {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  height: 100%;
+}
+.product-copy {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 3rem;
+  place-self: center;
+}
+.listing-img {
+  margin-top: 10%;
+  object-fit: scale-down;
+}
+#lux-keys {
+  width: 80%;
+  height: 80%;
+}
+#lux-mouse {
+  width: 90%;
+  height: 90%;
+}
+#lux-chair {
+  width: 100%;
+  height: 100%;
+}
+.prices {
+  font-size: 1.7em;
+}
+#spotlight {
+  grid-template-columns: 100%;
+  grid-template-rows: 89vh;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  border-top: 2px solid var(--tertiary);
+}
+#spotlight-img {
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  z-index: 0;
+  position: absolute;
+}
+#video {
+  width: 50%;
+  height: 60%;
+  margin-top: 15em;
+  z-index: 1;
+}
+#mailing-list {
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+#email {
+  border: none;
+  border-bottom: 1px solid var(--tertiary);
+  padding: 5px 10px;
+  outline: 0;
+  background-color: var(--purplebg);
+  color: var(--light-text);
+  margin-left: 3rem;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.4s 0.4s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+#submit {
+  font-family: "Ysabeau SC";
+  font-size: 1rem;
+  outline: 0;
+  padding: 0.3rem;
+  background-color: var(--tertiary);
+  font-weight: bold;
+  appearance: none;
+  border: 1px solid black;
+  box-shadow: 0px 0px 2px 2px #52442e;
+  border-radius: 0.5em;
+}
+#submit:active {
+  background-color: #52442e;
+}
+footer {
+  padding: 1em;
+  width: fit-content;
+  height: auto;
+  place-self: center;
+}
+footer p {
+  font-size: 100%;
+}
+footer a {
+  padding: 0.2em;
+}
+footer a:hover {
+  text-decoration: underline;
+  background-color: #f0f8ff80;
+  border-radius: 0.3em;
+  color: var(--purplebg);
+}
+/*MEDIA QUERIES from here down (using block of text to more easily find)
+####################################
+####################################
+####################################
+*/
+
+@media (min-width: 0px) and (max-width: 1060px) {
+  #header {
+    max-height: 100px;
+    width: 100vw;
+  }
+  #nav-bar {
+    justify-items: center;
+    width: 80%;
+    font-size: 90%;
+    grid-template-columns: 33.4% 33.3% 33.3%;
+    column-gap: normal;
+  }
+  #nav-bar > a {
+    text-align: center;
+    width: fit-content;
+  }
+
+  #main-a {
+    margin-top: 100px;
+    grid-template-columns: 100%;
+    grid-template-rows: 89vh 267vh 89vh 89vh;
+  }
+  .chunks {
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  #promo {
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 65%;
+  }
+  #promo > img {
+    height: 100%;
+    object-fit: scale-down;
+  }
+  #why-us {
+    padding: 2rem;
+  }
+  #review {
+    font-size: 1em;
+  }
+  .promo-copy {
+    font-size: 108%;
+    padding: 0;
+    overflow: auto;
+  }
+  #products {
+    grid-template-columns: 100%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    padding: 2rem;
+  }
+  .listing {
+    width: 100%;
+  }
+
+  .product-copy {
+    font-size: 100%;
+    padding: 1.2em;
+  }
+  #spotlight {
+    grid-template-rows: 100%;
+  }
+  #video {
+    margin-top: 1em;
+    width: 100%;
+  }
+  #spotlight-img {
+    width: 100%;
+    object-fit: scale-down;
+    top: -20%;
+  }
+  #mailing-list {
+    padding: 1em;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    font-size: 110%;
+  }
+  #mailing-list > form > h2 {
+    margin-bottom: 10%;
+  }
+  #form p {
+    margin-bottom: 5%;
+  }
+}
+/*
+601px+ styles
+*/
+@media (min-width: 601px) and (max-width: 1300px) {
+  #header {
+    max-width: 100%;
+  }
+  #nav-bar {
+    width: 70%;
+    font-size: 1.1em;
+  }
+  #promo {
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 40%;
+  }
+  #why-us {
+    padding: 2rem;
+  }
+  #review {
+    font-size: 1em;
+  }
+  .promo-copy {
+    font-size: 108%;
+    padding: 0;
+    overflow: auto;
+  }
+
+  #products {
+    place-items: center;
+  }
+  .listing {
+    width: 80%;
+  }
+  .listing-details {
+    grid-template-rows: 40% 60%;
+  }
+  .product-copy {
+    font-size: 1em;
+    padding: 0%;
+  }
+  #lux-chair {
+    object-fit: cover;
+  }
+  #video {
+    width: 70%;
+    margin-top: 10em;
+  }
+  #spotlight-img {
+    width: 100%;
+    top: -5%;
+  }
+  #mailing-list > #form > h2 {
+    margin-bottom: 5%;
+  }
+  #form p {
+    margin-bottom: 2.5%;
+  }
+}
+@media (min-width: 1301px) and (max-width: 2066px) {
+  #why-us {
+    padding: 1em;
+  }
+  .product-copy {
+    font-size: 1em;
+    padding: 0%;
+  }
+}
